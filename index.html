@@ -1,9 +1,91 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Example</title>
-    </head>
-    <body>
-        <p>This is an example of a simple HTML page with one paragraph.</p>
-    </body>
-</html>
+<!DOCTYPE html><html><style>.infobtn-float { /* button as a title with dynamic positioning - aperez 22Nov2022 */
+      position:fixed;
+      bottom:  25px;
+      right: 25px;
+      width:  40px;
+	    height: 40px;
+	    background-color: #000;
+	    color:#FFF;
+	    border-radius:50px;
+      cursor: pointer;
+      font-family: 'Roboto';
+      font-weight: 700;
+      text-decoration: none;
+      padding: 1em; /* from https://developer.mozilla.org/en-US/docs/Web/CSS/padding*/
+	    text-align:center;
+	    box-shadow: 2px 2px 3px #999;
+    }
+
+    /* animated about style block from https://codepen.io/sashatran/pen/pRpmWG - aperez 28Nov2022*/ 
+    @import url("https://fonts.googleapis.com/css?family=Roboto");
+    /*body {
+      background: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;                                        }*/
+    .container {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;                                   }
+
+    .button {
+      position: absolute;
+      z-index: 999;
+      width: 43px;
+      height: 43px;
+      background: black;
+      border-radius: 100%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: -12px;                                           }
+    .button:before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 2px;
+      background: #fff;
+      transform: rotate(90deg);
+      transition: all 0.4s ease;                            }
+    .button:after {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 2px;
+      background: #fff;
+      transition: all 0.4s ease;                            }
+
+    .nav {
+      opacity: 0;
+      transition: all 0.4s ease-in-out;
+      background: #fff;
+      width: 100%;
+      border-radius: 5px;
+      transform: translateY(0%);
+      box-shadow: 2px 3px 10px 0 rgba(81, 81, 81, 0.1);
+      border: 1px solid #e4e4e4;
+      padding: 10px;                                        }
+    .ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;                               }
+       
+    #toggle {
+      -webkit-appearance: none;                             }
+    #toggle:checked ~ .nav {
+      opacity: 1;
+      transform: translateY(10%);                           }
+    #toggle:checked ~ .button:before {
+      transform: rotate(225deg);                            }
+    #toggle:checked ~ .button:after {
+      transform: rotate(135deg);                            }
+    @media (max-width: 640px) {
+      .container {
+        width: 100%;
+      }                                                     }
+    /* end of animated about style block */</style><head><meta charset=utf-8><title>HEX LAND WORLD AND VALUABLES</title><link rel=apple-touch-icon sizes=57x57 href=./icons-e1ee2232863ff9fa1b4352e17b4a462d/apple-touch-icon-57x57.png><link rel=apple-touch-icon sizes=60x60 href=./icons-e1ee2232863ff9fa1b4352e17b4a462d/apple-touch-icon-60x60.png><link rel=apple-touch-icon sizes=72x72 href=./icons-e1ee2232863ff9fa1b4352e17b4a462d/apple-touch-icon-72x72.png><link rel=apple-touch-icon sizes=76x76 href=./icons-e1ee2232863ff9fa1b4352e17b4a462d/apple-touch-icon-76x76.png><link rel=apple-touch-icon sizes=114x114 href=./icons-e1ee2232863ff9fa1b4352e17b4a462d/apple-touch-icon-114x114.png><link rel=apple-touch-icon sizes=120x120 href=./icons-e1ee2232863ff9fa1b4352e17b4a462d/apple-touch-icon-120x120.png><link rel=apple-touch-icon sizes=144x144 href=./icons-e1ee2232863ff9fa1b4352e17b4a462d/apple-touch-icon-144x144.png><link rel=apple-touch-icon sizes=152x152 href=./icons-e1ee2232863ff9fa1b4352e17b4a462d/apple-touch-icon-152x152.png><link rel=apple-touch-icon sizes=180x180 href=./icons-e1ee2232863ff9fa1b4352e17b4a462d/apple-touch-icon-180x180.png><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black-translucent><meta name=apple-mobile-web-app-title content="Althash Web Platform"><link rel=icon type=image/png sizes=32x32 href=./icons-e1ee2232863ff9fa1b4352e17b4a462d/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=./icons-e1ee2232863ff9fa1b4352e17b4a462d/favicon-16x16.png><link rel="shortcut icon" href=./icons-e1ee2232863ff9fa1b4352e17b4a462d/favicon.ico><meta name=mobile-web-app-capable content=yes><meta name=theme-color content=#fff><meta name=application-name content="Althash Web Platform"><link href=./static/css/app.7ae7851d34aa4f5a69ecfa7b89466335.css rel=stylesheet></head><body><div id=app></div><a id=info class="infobtn-float hover">i</a><div class=container><input type=checkbox id=toggle unchecked><label class=button for=toggle></label><nav class=nav><ul><center><p><span style="font-size:13px;font-family: Arial, Helvetica, sans-serif">Hex Land Collection by<br>© 2021 - 2023<b>Mineral Exploration 3D - www.minex3D.com</b><br>All rights reserved.</span></p></center></ul></nav></div><script type=text/javascript src=./static/js/manifest.97fc0f0b9fe091f923cd.js></script><script type=text/javascript src=./static/js/vendor.8b349e71d6a3e81da72e.js></script><script type=text/javascript src=./static/js/app.d5aa1039b59149584e19.js></script></body></html>
